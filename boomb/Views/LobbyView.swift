@@ -17,6 +17,9 @@ struct LobbyView: View {
             Text("LOBBY")
                 .font(Font.custom("Dimitri", size: 24))
             
+            Text("ROOM: \(controller.channel)")
+                .font(Font.custom("Dimitri", size: 16))
+            
             Spacer()
             
             ScrollView {

@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct EnterView: View {
-    @State private var text = ""
+    @State private var username = ""
+    @State private var room = ""
     @StateObject var controller = GameController.to
     
     var body: some View {
         VStack(alignment: .center, spacing: 8) {
+            Spacer()
+            
             Text("USERNAME")
                 .font(Font.custom("Dimitri", size: 16))
                 .foregroundColor(.black)
+                .frame(maxWidth: .infinity, alignment: .leading)
             
-            MyTextField(text: $text)
+            MyTextField(text: $username)
+            
+            Text("ROOM")
+                .font(Font.custom("Dimitri", size: 16))
+                .foregroundColor(.black)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+            MyTextField(text: $room)
+            
+            Spacer()
             
             MyButton(label: "ENTER") {
-                controller.username = text
+                controller.username = username
+                controller.channel = room
 
                 BoombService.joinLobby(controller.username, controller.channel)
             }

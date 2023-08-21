@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MyButton: View {
     var label: String
+    var color: Color = Color.myBlue
+    var fontColor: Color = .white
     var onTap: () -> Void
     
     var body: some View {
@@ -18,13 +20,13 @@ struct MyButton: View {
             Text(label)
 //                .font(Font.custom("SF Mono", size: 16))
                 .fontWeight(.heavy)
-                .foregroundColor(.white)
+                .foregroundColor(fontColor)
                 .padding(16)
                 .frame(
                     maxWidth: .infinity,
                     alignment: .center
                 )
-                .background(Color.myBlue)
+                .background(color)
         }
         .buttonStyle(.plain)
     }

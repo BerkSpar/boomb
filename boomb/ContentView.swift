@@ -14,12 +14,13 @@ enum Screen {
     case leaderboard
     case waitingRoom
     case lobby
+    case onboarding
 }
 
 class Navigator: ObservableObject {
     static var to = Navigator()
     
-    @Published var screen: Screen = .enter
+    @Published var screen: Screen = .onboarding
     @Published var isAlertPresented: Bool = false
     @Published var alert: Alert = Alert(title: Text(""))
     
@@ -45,6 +46,7 @@ struct ContentView: View {
                 case .waitingRoom: WaitingRoomView()
                 case .leaderboard: LeaderboardView()
                 case .lobby: LobbyView()
+                case .onboarding: OnboardingView()
             }
         }
         .alert(isPresented: $navigator.isAlertPresented) {
