@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Your Ultimate Quiz Playground</h4>
+<h4 align="center">Your Ultimate Quizz Playground</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
