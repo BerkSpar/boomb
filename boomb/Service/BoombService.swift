@@ -10,7 +10,7 @@ import Foundation
 
 class BoombService: ObservableObject {
     static let manager = SocketManager(
-        socketURL: URL(string: "https://boomb-api-71942ea7d526.herokuapp.com")!,
+        socketURL: URL(string: "https://api.boomb.io")!,
         config: [ .log(false), .compress ]
     )
     
