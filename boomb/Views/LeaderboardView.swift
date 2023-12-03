@@ -12,6 +12,7 @@ import ConfettiSwiftUI
 struct LeaderboardView: View {
     @StateObject var controller = GameController.to
     @State var counter = 1
+    @State var showInterstitialAd = false
     
     var body: some View {
         VStack(alignment: .center, spacing: 8) {
@@ -54,6 +55,8 @@ struct LeaderboardView: View {
                     AnalyticsParameterItemName: "finish",
                     AnalyticsParameterContentType: "game",
                 ])
+                
+                showInterstitialAd.toggle()
             }
         }
         .padding(24)
@@ -63,6 +66,7 @@ struct LeaderboardView: View {
         .onAppear {
             counter += 1
         }
+        .presentInterstitialAd(isPresented: $showInterstitialAd, adUnitId: AdService.interstitialFinishGame)
     }
 }
 

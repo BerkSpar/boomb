@@ -43,6 +43,8 @@ struct boombApp: App {
                 .onAppear {
                     BoombService.start()
                     
+                    InterstitialAd.shared.loadAd(withAdUnitId: AdService.interstitialFinishGame)
+                    
                     Analytics.logEvent("open_app", parameters: [
                         AnalyticsParameterItemID: "open_app",
                         AnalyticsParameterItemName: "game",

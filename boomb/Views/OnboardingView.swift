@@ -10,6 +10,7 @@ import FirebaseAnalytics
 import AppTrackingTransparency
 import AdSupport
 import FirebaseMessaging
+import GoogleMobileAds
 
 //NEWLY ADDED PERMISSIONS FOR iOS 14
 func requestPermission() {
@@ -90,6 +91,7 @@ struct OnboardingView: View {
                 color: Color.myBlue
             ) {  
                 requestPermission()
+                GADMobileAds.sharedInstance().start(completionHandler: nil)
                 Navigator.to.screen(.enter)
                 Analytics.logEvent("tutorial_complete", parameters: nil)
             }
