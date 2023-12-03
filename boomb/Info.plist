@@ -6,6 +6,14 @@
 	<array>
 		<string>Dimitri.TTF</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>App would like to access IDFA for tracking purpose</string>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
@@ -13,5 +21,11 @@
 		<key>UIImageName</key>
 		<string>logo</string>
 	</dict>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>processing</string>
+        <string>remote-notification</string>
+    </array>
 </dict>
 </plist>

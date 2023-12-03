@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 import ConfettiSwiftUI
 
 struct LeaderboardView: View {
@@ -47,6 +48,12 @@ struct LeaderboardView: View {
             
             MyButton(label: "EXIT GAME") {
                 controller.resetGame()
+                
+                Analytics.logEvent("finish-game", parameters: [
+                    AnalyticsParameterItemID: "finish",
+                    AnalyticsParameterItemName: "finish",
+                    AnalyticsParameterContentType: "game",
+                ])
             }
         }
         .padding(24)

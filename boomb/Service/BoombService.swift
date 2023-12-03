@@ -7,6 +7,7 @@
 
 import SocketIO
 import Foundation
+import FirebaseAnalytics
 
 class BoombService: ObservableObject {
     static let manager = SocketManager(
@@ -129,14 +130,24 @@ class BoombService: ObservableObject {
         let data = ["username": username, "channel": channel]
 
         socket.emit("join-lobby", data)
+        
+        Analytics.logEvent("join_group", parameters: [
+            "group_id": channel,
+        ])
     }
     
     static func startGame(_ username: String, _ channel: String) {
         if (username.isEmpty) { return }
         
         let data = ["username": username, "channel": channel]
-
+        
         socket.emit("start-game", data)
+        
+        Analytics.logEvent("start_game", parameters: [
+            AnalyticsParameterItemID: channel,
+            AnalyticsParameterItemName: "game",
+            AnalyticsParameterContentType: "game",
+        ])
     }
     
     static func answer(_ username: String, _ channel: String,_ quizzId: Int,_ answerId: Int) {
@@ -145,5 +156,10 @@ class BoombService: ObservableObject {
         let data: [String:Any] = ["username": username, "channel": channel, "quizz_id": quizzId, "answer_id": answerId]
         
         socket.emit("answer", data)
+        
+        Analytics.logEvent("select_content", parameters: [
+            "content_type": "answer",
+            "content_id": "answerId",
+        ])
     }
 }
