@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76CA5822B20633600FE577A /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76CA5812B20633600FE577A /* NotificationService.swift */; };
 		F774E3A52A7B3E69008239B4 /* WaitingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774E3A42A7B3E69008239B4 /* WaitingRoomView.swift */; };
 		F774E3A92A7C0E6C008239B4 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = F774E3A82A7C0E6C008239B4 /* SocketIO */; };
 		F774E3AB2A7C0E9F008239B4 /* BoombService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F774E3AA2A7C0E9F008239B4 /* BoombService.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F76CA5812B20633600FE577A /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F774E3A42A7B3E69008239B4 /* WaitingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomView.swift; sourceTree = "<group>"; };
 		F774E3AA2A7C0E9F008239B4 /* BoombService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoombService.swift; sourceTree = "<group>"; };
 		F774E3AD2A7C13BD008239B4 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				F774E3AA2A7C0E9F008239B4 /* BoombService.swift */,
 				F7BD37FD2A7F3D2600CA111E /* HapticService.swift */,
+				F76CA5812B20633600FE577A /* NotificationService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				F781F94F2A7AF16C008156B2 /* PlayerTile.swift in Sources */,
 				F774E3B42A7C2517008239B4 /* GameModel.swift in Sources */,
 				F7BD37FE2A7F3D2600CA111E /* HapticService.swift in Sources */,
+				F76CA5822B20633600FE577A /* NotificationService.swift in Sources */,
 				F7D97C4C2A7B2FE300C211A6 /* LeaderboardView.swift in Sources */,
 				F7F24DD82B1D39FE00A3BBA3 /* RewardedAdView.swift in Sources */,
 				F781F95C2A7AF90E008156B2 /* EnterView.swift in Sources */,
@@ -485,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -539,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -564,7 +568,7 @@
 				INFOPLIST_FILE = boomb/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Boomb;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "App would like to access IDFA for tracking purpose";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This allows Boomb to provide you with a better ads experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -601,7 +605,7 @@
 				INFOPLIST_FILE = boomb/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Boomb;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.trivia-games";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "App would like to access IDFA for tracking purpose";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This allows Boomb to provide you with a better ads experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = "";

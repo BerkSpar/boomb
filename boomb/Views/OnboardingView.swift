@@ -90,6 +90,9 @@ struct OnboardingView: View {
                 label: "LET'S GO!!!",
                 color: Color.myBlue
             ) {  
+                Task {
+                    await NotificationService().request()
+                }
                 requestPermission()
                 GADMobileAds.sharedInstance().start(completionHandler: nil)
                 Navigator.to.screen(.enter)
