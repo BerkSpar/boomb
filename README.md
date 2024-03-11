@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/berkspar/boomb-app"><img src="/logo.png" alt="Boomb: The Quizz" style="border: 3px solid black;" width="200"></a>
+  <a href="https://github.com/berkspar/boomb-app"><img src="/logo-boomb.png" alt="Boomb: The Quizz" style="border: 3px solid black;" width="200"></a>
   <br>
   Boomb: The Quizz
   <br>
@@ -17,7 +17,7 @@
   <a href="CHANGELOG.md">Changelog</a>
 </p>
 
-![screenshot](/banner.png)
+![screenshot](/capa-boomb.png)
 
 ## Key Features
 
