@@ -13,7 +13,7 @@
   <a href="#how-to-use">How To Use</a> •
   <a href="#download">Download</a> •
   <a href="#credits">Credits</a> •
-  <a href="#license">License</a> •
+  <a href="/LICENSE">License</a> •
   <a href="CHANGELOG.md">Changelog</a>
 </p>
 
@@ -60,10 +60,6 @@ This app is created on [Apple Developer Academy](https://developeracademy.pucpr.
 
 - [Hub Finder](https://github.com/BerkSpar/hub_finder) - A social way to use Github
 - [Bunnie](https://github.com/BerkSpar/bunnie) - Never forget what anime you are watching
-
-## License
-
-MIT
 
 ---
 
