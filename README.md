@@ -21,7 +21,9 @@
 
 ## Key Features
 
-* ...
+* play quizzes with your friends
+* create your own quizzes
+* unlimited player count
 
 ## How To Use
 
