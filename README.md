@@ -31,10 +31,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [X
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/berkspar/boomb-app
+$ git clone https://github.com/berkspar/boomb
 
 # Go into the repository
-$ cd boomb-app
+$ cd boomb
 
 # Open the xcode
 $ xed .
