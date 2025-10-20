@@ -62,11 +62,9 @@ struct LeaderboardView: View {
         .padding(24)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.myYellow)
-        .confettiCannon(counter: $counter, num: 100, colors: [Color.myBlue, Color.myPurple, Color.myRed], rainHeight: 1000.0, radius: 500.0, repetitions: 3, repetitionInterval: 0.5)
         .onAppear {
             counter += 1
         }
-        .presentInterstitialAd(isPresented: $showInterstitialAd, adUnitId: AdService.interstitialFinishGame)
     }
 }
 

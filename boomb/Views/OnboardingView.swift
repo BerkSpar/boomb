@@ -10,42 +10,6 @@ import FirebaseAnalytics
 import AppTrackingTransparency
 import AdSupport
 import FirebaseMessaging
-import GoogleMobileAds
-
-//NEWLY ADDED PERMISSIONS FOR iOS 14
-func requestPermission() {
-    if #available(iOS 14, *) {
-        ATTrackingManager.requestTrackingAuthorization { status in
-            switch status {
-            case .authorized:
-                // Tracking authorization dialog was shown
-                // and we are authorized
-                print("Authorized")
-                
-                Analytics.logEvent("tracking_authorized", parameters: nil)
-                
-                // Now that we are authorized we can get the IDFA
-                print(ASIdentifierManager.shared().advertisingIdentifier)
-            case .denied:
-                // Tracking authorization dialog was
-                // shown and permission is denied
-                Analytics.logEvent("tracking_denied", parameters: nil)
-                print("Denied")
-            case .notDetermined:
-                // Tracking authorization dialog has not been shown
-                Analytics.logEvent("tracking_not_determined", parameters: nil)
-                print("Not Determined")
-            case .restricted:
-                Analytics.logEvent("tracking_restricted", parameters: nil)
-                print("Restricted")
-            @unknown default:
-                Analytics.logEvent("tracking_unknown", parameters: nil)
-                print("Unknown")
-            }
-        }
-    }
-}
-//
 
 struct OnboardingView: View {
     init() {
@@ -93,8 +57,7 @@ struct OnboardingView: View {
                 Task {
                     await NotificationService().request()
                 }
-                requestPermission()
-                GADMobileAds.sharedInstance().start(completionHandler: nil)
+                
                 Navigator.to.screen(.enter)
                 Analytics.logEvent("tutorial_complete", parameters: nil)
             }
