@@ -11,7 +11,7 @@ import FirebaseAnalytics
 
 class BoombService: ObservableObject {
     static let manager = SocketManager(
-        socketURL: URL(string: "https://api.boomb.io")!,
+        socketURL: URL(string: "https://boomb-api.onrender.com")!,
         config: [ .log(false), .compress ]
     )
     
